@@ -1,0 +1,40 @@
+bookshop_data_pipeline/
+├── docker/
+│   ├── docker-compose.yml
+│   ├── postgres/
+│   │   └── init-scripts/
+│   │       └── init.sql
+│   └── airflow/
+│       ├── dags/
+│       │   ├── bookshop_pipeline.py
+│       │   └── bookshop_init.py
+│       └── Dockerfile
+├── dbt/
+│   ├── profiles.yml
+│   └── bookshop/
+│       ├── dbt_project.yml
+│       ├── models/
+│       │   ├── staging/
+│       │   │   ├── stg_books.sql
+│       │   │   ├── stg_category.sql
+│       │   │   ├── stg_customers.sql
+│       │   │   ├── stg_factures.sql
+│       │   │   └── stg_ventes.sql
+│       │   ├── warehouse/
+│       │   │   ├── dim_books.sql
+│       │   │   ├── dim_category.sql
+│       │   │   ├── dim_customers.sql
+│       │   │   ├── fact_ventes.sql
+│       │   │   ├── fact_factures.sql
+│       │   │   ├── fact_books_annees.sql
+│       │   │   ├── fact_books_mois.sql
+│       │   │   └── fact_books_jour.sql
+│       │   └── marts/
+│       │       └── obt_sales.sql
+│       └── seeds/
+│           ├── raw_books.csv
+│           ├── raw_category.csv
+│           ├── raw_customers.csv
+│           ├── raw_factures.csv
+│           └── raw_ventes.csv
+└── README.md
